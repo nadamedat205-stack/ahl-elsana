@@ -1,0 +1,27 @@
+Website update notes
+===================
+
+Updated:
+- Consolidated the duplicated Join Community styling into one maintainable section.
+- Added a unified color-token system for Dark and Light modes.
+- Dark palette tuned toward deep green-black surfaces, soft green card borders, emerald accents, and controlled gold.
+- Light mode now uses readable dark text, soft white surfaces, and a clean light Hero background rather than the dark photo.
+- Theme toggle and saved preference are enabled on the category page and alternate mage page as well as the homepage.
+- Theme storage calls now fail gracefully if browser storage is blocked.
+- Header glass effect and scroll-state styling added.
+- Hero background uses the included architectural/construction banner in Dark Mode with a stronger readable overlay.
+- Search controls compacted and responsive; mobile layout switches to a compact two-field-plus-button grid.
+- Specialty cards use a four-column desktop grid, three-column tablet/mobile grid, and two columns on very narrow screens; cards are vertically organized on mobile.
+- Added lightweight scroll-reveal animations with IntersectionObserver, keyboard activation for category cards, and reduced-motion support.
+- Fixed a missing building-category image path and corrected `object-fit: content` to `contain`.
+- Fixed an unclosed homepage nav-container div.
+- Added mobile refinements for category page header and theme controls.
+
+Static checks:
+- JavaScript syntax check passed (`node --check`).
+- CSS parser reported no syntax/declaration parsing errors.
+- Local HTML/CSS asset reference check passed except the architectural banner path is CSS-escaped for its spaces; the file exists in the project.
+- Browser-based visual/interaction testing could not be completed because the browser environment blocked navigation with ERR_BLOCKED_BY_ADMINISTRATOR. Please test in your own Chrome after extraction.
+
+
+Final count-card refinement (2026-11-22): category card totals are computed from unique technician records in the local JavaScript categories dataset using id/phone/name fallback. The current project has no database/API, so live counts update on page load when source records in script.js change; registration is currently external via WhatsApp. Removed availability status labels from specialty cards. Fixed ceramic card image path.
