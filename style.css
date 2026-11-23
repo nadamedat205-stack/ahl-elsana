@@ -1854,3 +1854,53 @@ html[data-theme="light"] .footer-col ul a:hover { color: var(--accent-gold); }
 .category-icon img.img-upvc {
 transform: scale(1.7);
 }
+
+
+/* تنويه التعامل المباشر مع الفنيين */
+.customer-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    padding: 9px 13px;
+    background: rgba(212, 175, 55, 0.09);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: var(--text-main);
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.9;
+}
+
+.customer-notice i {
+    color: #d4af37;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.customer-notice p {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* الوضع الفاتح */
+body.light-mode .customer-notice {
+    background: rgba(180, 135, 20, 0.08);
+    border-color: rgba(180, 135, 20, 0.35);
+    color: #26352b;
+    font-weight: 700;
+}
+
+/* الموبايل */
+@media (max-width: 576px) {
+    .customer-notice {
+        padding:  10px;
+        font-size: 13px;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+}

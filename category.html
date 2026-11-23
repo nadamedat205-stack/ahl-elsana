@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
     <title>أهل الصنعة | التخصصات</title>
 
     <!-- Google Fonts: Cairo -->
@@ -19,28 +20,36 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="category-header">
+
     <a href="index.html" class="logo">
         <i class="fas fa-screwdriver-wrench"></i>
         <span>أهل الصنعة</span>
     </a>
 
     <div class="category-header-actions">
+
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="تفعيل الوضع الفاتح">
             <i class="fa-solid fa-sun"></i>
         </button>
+
         <a href="index.html" class="back-home">
             <i class="fas fa-arrow-right"></i>
             <span>العودة للرئيسية</span>
         </a>
+
     </div>
+
 </header>
 
 <main class="category-page">
 
+    <!-- عنوان التخصص -->
     <div class="category-intro">
+
         <span class="category-label" id="categoryLabel">
             التخصصات
         </span>
@@ -50,13 +59,31 @@
         <p id="categoryDescription">
             اختاري الشخص المناسب لمشروعك
         </p>
+
     </div>
 
+    <!-- تنويه هام للعميل -->
+    <div class="customer-notice">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        <p>
+        <strong>تنويه مهم:</strong>
+        الإدارة غير مسؤولة عن التعامل المباشر مع الفني .
+    </p>
+        
+
+    </div>
+
+    <!-- قائمة الفنيين -->
     <section class="engineers-section">
 
         <div class="engineers-heading">
+
             <h2 id="peopleTitle">الأشخاص المتاحين</h2>
+
             <span id="peopleCount"></span>
+
         </div>
 
         <div class="engineers-grid" id="engineersGrid">
@@ -73,12 +100,17 @@
 <script src="script.js"></script>
 
 <script>
-    // إذا تم فتح الصفحة محلياً عبر mage.html، اجعل روابط العودة ترجع لـ mage.html بسلاسة
-    if (window.location.protocol === 'file:' && window.location.pathname.includes('category.html')) {
+    // إذا تم فتح الصفحة محلياً عبر mage.html،
+    // اجعل روابط العودة ترجع لـ mage.html
+    if (
+        window.location.protocol === 'file:' &&
+        window.location.pathname.includes('category.html')
+    ) {
         document.querySelectorAll('a[href="index.html"]').forEach(a => {
             a.setAttribute('href', 'mage.html');
         });
     }
 </script>
+
 </body>
 </html>
